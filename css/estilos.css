@@ -1,0 +1,310 @@
+:root {
+    --primary-color: #3498db; 
+    --secondary-color: #2ecc71; 
+    --accent-color: #e74c3c; 
+    --background-color: black; 
+    --text-color: #2c3e50; 
+}
+
+
+header {
+    background-color: var(--background-color);    
+    text-align: center;
+    line-height: 60px;
+    /* Ajsuta tamaño de linea */
+    height: 100%;
+    /* Ajsuta el tamaño */
+    color: white;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de profundidad */
+
+}
+
+/*Estilos del span dentro del header*/
+header h1 {
+    color: white;
+    margin-top: 0%;
+    
+}
+
+/*Estilos de los hijos de header y nav*/
+header nav a {
+    color: white;
+    padding-left: 1%;
+}
+
+/*Estilos del body*/
+body {
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-left: 0%;
+    overflow-x: hidden;
+
+}
+
+
+#section1 {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #f4f4f9; /* Fondo claro para resaltar */
+    color: #333; /* Texto oscuro para buena legibilidad */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#section1 img {
+    margin-top: 1.5%;
+    float: left;
+    margin-right: 10px;
+    margin-left: 30px;
+    border-radius: 4px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#section1 img:hover {
+    transform: scale(1.05); /* Efecto de zoom ligero */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más profunda */
+}
+
+
+#section1 p {
+    padding-left: 20rem;
+    margin-left: 10px;
+    height: fit-content;
+    overflow: hidden;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #555; /* Gris intermedio para texto */
+    /* Asegura que ocupa el tamañano justo */
+}
+
+#section1 h2 {
+    font-size: 24px;
+    padding-left: 20rem;
+    margin-left: 10px;
+    height: fit-content;
+    overflow: hidden;
+    /* Asegura que ocupa el tamañano justo */
+}
+
+/*Estilo para que el section envuelva los elementos flotantes*/
+#section1::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#section1:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+#section2 {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #f4f4f9; /* Fondo claro para resaltar */
+    color: #333; /* Texto oscuro para buena legibilidad */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#section2 img {
+    margin-top: 1.5%;
+    float: right;
+    margin-left: 10px;
+    margin-right: 30px;
+    border-radius: 4px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#section2 img:hover {
+    transform: scale(1.05); /* Efecto de zoom ligero */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más profunda */
+}
+
+
+#section2 p {
+    padding-right: 20rem;
+    margin-right: 10px;
+    height: fit-content;
+    overflow: hidden;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #555; /* Gris intermedio para texto */
+    /* Asegura que ocupa el tamañano justo */
+}
+
+#section2 h2 {
+    font-size: 24px;
+    padding-right: 20rem;
+    margin-right: 10px;
+    height: fit-content;
+    overflow: hidden;
+    /* Asegura que ocupa el tamañano justo */
+}
+
+/*Estilo para que el section envuelva los elementos flotantes*/
+#section2::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#section2:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+.tituloTabla {
+    text-align: center;
+    display: block;
+    font-size: 1.8rem;
+    color: #555555; /* Color gris intermedio */
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 15px 0;
+    letter-spacing: 0.5px;
+    padding-left: 10px;
+}
+
+
+.tabla tbody>tr:nth-child(odd) {
+    background-color: pink;
+    /*Cambia el color solo a las impares*/
+}
+
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse; /* Elimina el espacio entre celdas */
+    margin: 20px 0;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+
+.tabla thead {
+    background-color: grey; /* Color de fondo para la cabecera */
+    color: #ffffff;
+}
+
+.tabla th,
+.tabla td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd; /* Línea divisoria clara */
+}
+
+.tabla tbody tr {
+    background-color: #f9f9f9; /* Color de fondo alternativo */
+}
+
+.tabla tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Filas pares con color diferente */
+}
+
+.tabla tbody tr:hover {
+    background-color: #f1f1f1; /* Cambio de color al hacer hover */
+}
+
+.tabla th {
+    font-weight: bold;
+}
+
+.tabla td {
+    color: #333333; /* Color del texto */
+}
+
+
+#sectionNews {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.labelForm {
+    margin: 5%;
+}
+
+.buttonForm {
+    margin-top: 1%;
+    margin-left: 5%;
+    border-radius: 12px;
+}
+
+
+
+#sectionNews img {
+    float: right;
+    margin-left: 10px;
+    margin-right: 30px;
+    border-radius: 4px;;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#sectionNews img:hover {
+    transform: scale(1.05); /* Efecto de zoom ligero */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más profunda */
+}
+
+
+#sectionNews div {
+    margin-left: 20%;
+}
+
+/*Estilo para que el section envuelva los elementos flotantes*/
+#sectionNews::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#card-container {
+    text-align: center;
+    /* Centra las tarjetas horizontalmente */
+}
+
+.card {
+    display: inline-block;
+    /* Hace que las tarjetas se comporten como elementos en línea */
+    width: 30%;
+    /* Ajusta el ancho de las tarsjetas */
+    margin: 1%;
+    /* Añade un margen entre las tarjetas */
+    padding: 20px;
+    /* Añade relleno dentro de las tarjetas */
+    background-color: #f2f2f2;
+    /* Color de fondo de las tarjetas */
+    border: 1px solid #ddd;
+    /* Borde de las tarjetas */
+    box-sizing: border-box;
+    /* Incluye el borde y el relleno en el tamaño total */
+}
+/* Tarjeta con glassmorphism */
+.tarjeta-glass {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: inline-block;
+    /* Hace que las tarjetas se comporten como elementos en línea */
+    width: 30%;
+    /* Ajusta el ancho de las tarsjetas */
+    margin: 1%;
+    /* Añade un margen entre las tarjetas */
+    padding: 20px;
+}
+/* Explicación: Este estilo utiliza transparencia y desenfoque para crear un efecto "vidrio", popular en diseños modernos. */
