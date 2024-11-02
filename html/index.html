@@ -6,73 +6,54 @@
         <link rel="stylesheet" href="../css/estilos.css">
     </head>
     <body>
+        <header>
+            <a href="../html/index.html">
+                <h1>Blog de videojuegos</h1>
+            </a>
+            <nav>
+                <a href="../html/index.html">Inicio</a>
+                <a href="../html/categorias.html">Categorias</a>
+            </nav>
+        </header>
         <main>
-            <header><h1>Blog de videojuegos</h1>
-                <nav>
-                    <a href="../html/index.html">Inicio</a>
-                    <a href="../html/categorias.html">Categorias</a>
-                </nav>
-            </header>
             <section id="section1">
-                <img id="img1" alt="Imagen del videojuego"
-                    src="../img/tal.jpg">
+                <a href="https://www.playthroneandliberty.com/es-es/">
+                    <img id="img1" alt="Imagen del videojuego" src="../img/tal.jpg">
+                </a>
                 <h2>Novedades</h2>
-                <p>Lorem Ipsum es simplemente el texto de relleno de las
-                    imprentas y
-                    archivos de texto. Lorem Ipsum ha sido el texto de
-                    relleno
-                    estándar de las industrias desde el año 1500, cuando un
-                    impresor
-                    (N. del T. persona que se dedica a la imprenta)
-                    desconocido
-                    usó
-                    una galería de textos y los mezcló de tal manera que
-                    logró
-                    hacer
-                    un libro de textos especimen. No sólo sobrevivió 500
-                    años,
-                    sino
-                    que tambien ingresó como texto de relleno en documentos
-                    electrónicos, quedando esencialmente igual al original.
-                    Fue
-                    popularizado en los 60s con la creación de las hojas
-                    "Letraset",
-                    las cuales contenian pasajes de Lorem Ipsum, y más
-                    recientemente
-                    con software de autoedición, como por ejemplo Aldus
-                    PageMaker,
-                    el cual incluye versiones de Lorem Ipsum.
+                <p>Throne and Liberty es un videojuego MMORPG desarrollado por
+                    NCSoft, conocido por sus impresionantes gráficos y su estilo
+                    de juego en mundo abierto. Ambientado en un universo de
+                    fantasía medieval, el juego permite a los jugadores explorar
+                    vastos paisajes, combatir en épicas batallas PvE y PvP, y
+                    formar alianzas con otros usuarios. Uno de sus aspectos más
+                    destacados es el sistema de cambio climático y ciclos de día
+                    y noche, que afectan las habilidades y el desarrollo del
+                    entorno, añadiendo profundidad estratégica a cada partida.
+                    Además, incluye mecánicas de transformación de personajes en
+                    criaturas y animales, lo que permite acceder a zonas
+                    exclusivas y diversificar el estilo de combate.
                 </p>
             </section>
             <section id="section2">
-                <img id="img2" alt="Imagen del videjuego"
-                    src="../img/cs2.jpg">
+                <a href="https://www.counter-strike.net/cs2?l=spanish">
+                    <img id="img2" alt="Imagen del videojuego" src="../img/cs2.jpg">
+                </a>
                 <h2>Más jugados</h2>
-                <p>Lorem Ipsum es simplemente el texto de relleno de las
-                    imprentas y
-                    archivos de texto. Lorem Ipsum ha sido el texto de
-                    relleno
-                    estándar de las industrias desde el año 1500, cuando un
-                    impresor
-                    (N. del T. persona que se dedica a la imprenta)
-                    desconocido
-                    usó
-                    una galería de textos y los mezcló de tal manera que
-                    logró
-                    hacer
-                    un libro de textos especimen. No sólo sobrevivió 500
-                    años,
-                    sino
-                    que tambien ingresó como texto de relleno en documentos
-                    electrónicos, quedando esencialmente igual al original.
-                    Fue
-                    popularizado en los 60s con la creación de las hojas
-                    "Letraset",
-                    las cuales contenian pasajes de Lorem Ipsum, y más
-                    recientemente
-                    con software de autoedición, como por ejemplo Aldus
-                    PageMaker,
-                    el cual incluye versiones de Lorem Ipsum.
+                <p>Counter-Strike 2 (CS2) es la esperada evolución de
+                    Counter-Strike: Global Offensive (CS
+                    ), desarrollada por Valve. Construido sobre el motor gráfico
+                    Source 2, CS2 trae mejoras visuales, físicas y de
+                    rendimiento que redefinen la experiencia de juego sin perder
+                    la esencia del clásico shooter táctico. Entre sus
+                    innovaciones destacan los efectos de humo dinámico, que
+                    reaccionan a disparos y explosiones, y el rediseño de mapas
+                    icónicos para ofrecer un entorno visualmente más detallado y
+                    realista. La precisión en el registro de disparos y un
+                    sistema de emparejamiento optimizado son otras mejoras
+                    clave, orientadas a ofrecer una jugabilidad más justa y
+                    fluida. Con CS2, Valve busca revitalizar la escena de los
+                    eSports y atraer tanto a veteranos como a nuevos jugadores.
                 </p>
             </section>
             <section id="section3">
@@ -105,26 +86,47 @@
                 </table>
             </section>
             <section id="sectionNews">
-                <h2 class="tituloTabla">Suscríbete a la newsletter</h2>
-                <img id="img6" alt="Imagen del videojuego"
-                    src="../img/strdw.jpg">
+                <h2 class="tituloNews">Suscríbete a la newsletter</h2>
+                <a href="https://www.stardewvalley.net/">
+                    <img id="img6" alt="Imagen del videojuego" src="../img/strdw.jpg">
+                </a>
                 <form>
                     <div>
-                        <label class="labelForm"
+                        <label class="labelFormName"
                             for="nombreInput">Nombre</label>
                         <br>
-                        <input id="nombreInput">
+                        <input id="nombreInput" type="text"
+                            placeholder="Nombre" tabindex="1">
                         <br>
-                        <label class="labelForm"
-                            for="emailInput">Email</label>
                         <br>
-                        <input id="emailInput">
+                        <label class="labelFormEmail"
+                            for="emailInput">Correo electrónico</label>
+                        <br>
+                        <input id="emailInput" type="text"
+                            placeholder="Correo electrónico" tabindex="2">
                         <br>
                         <button class="buttonForm"
-                            type="button">Enviar</button>
+                            type="button" tabindex="3">Enviar</button>
                     </div>
                 </form>
             </section>
         </main>
+        <footer class="footer">
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="../img/fcbk.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="../img/twittter.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="../img/ig.png" alt="Instagram">
+                </a>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Fernando Rodríguez Rodríguez. Todos los derechos
+                reservados.
+            </div>
+        </footer>
     </body>
 </html>

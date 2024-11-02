@@ -1,57 +1,64 @@
+/*Paleta de colores usada*/
 :root {
-    --primary-color: #3498db; 
-    --secondary-color: #2ecc71; 
-    --accent-color: #e74c3c; 
-    --background-color: black; 
-    --text-color: #2c3e50; 
+    --background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    --background-old: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    --section-bg: rgba(255, 255, 255, 0.704);
+    --section-text: black;
+    --titles-text: white;
+    --nav-text: white;
+    --section-border: grey;
+    --section-box-shadow: rgba(0, 0, 0, 0.359);
+    --table-title: grey;
+    --table-body: whitesmoke;
+    --btn-bg:#0F2027
 }
 
 
 header {
-    background-color: var(--background-color);    
     text-align: center;
     line-height: 60px;
-    /* Ajsuta tamaño de linea */
     height: 100%;
-    /* Ajsuta el tamaño */
-    color: white;
+    color: var(--titles-text);
+    /* Gradiente para navegadores actuales */
+    background: var(--background);
+}
 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de profundidad */
-
+/*Eliminar el subrayado de los hypertext*/
+a {
+    text-decoration: none;
 }
 
 /*Estilos del span dentro del header*/
 header h1 {
-    color: white;
+    padding-top: 1%;
     margin-top: 0%;
-    
+    font-size: 2.5rem;
+    color: var(--titles-text);
+    text-align: center;
+    display: inline-block;
 }
 
 /*Estilos de los hijos de header y nav*/
 header nav a {
-    color: white;
+    color: var(--nav-text);
     padding-left: 1%;
 }
 
 /*Estilos del body*/
 body {
-    margin-top: 0%;
-    margin-right: 0%;
-    margin-left: 0%;
+    margin: 0%;
     overflow-x: hidden;
-
+    /*Gradiente para navegadores actuales */
+    background: var(--background);
 }
-
-
 #section1 {
     margin: 10px;
     padding: 10px;
-    border: 1px solid grey;
-    border-radius: 4px;
-    background-color: #f4f4f9; /* Fondo claro para resaltar */
-    color: #333; /* Texto oscuro para buena legibilidad */
+    border: 1px solid var(--section-border);
+    background-color: var(--section-bg);
+    color: var(--section-text);
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px var(--section-box-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -60,26 +67,28 @@ body {
     float: left;
     margin-right: 10px;
     margin-left: 30px;
-    border-radius: 4px;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px var(--section-box-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 #section1 img:hover {
-    transform: scale(1.05); /* Efecto de zoom ligero */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más profunda */
+    transform: scale(1.05);
+    /* Efecto de zoom ligero */
+    box-shadow: 0 12px 24px var(--section-box-shadow);
+    /* Sombra más profunda */
 }
 
 
 #section1 p {
+    text-align: justify;
     padding-left: 20rem;
     margin-left: 10px;
     height: fit-content;
     overflow: hidden;
     line-height: 1.6;
     font-size: 1rem;
-    color: #555; /* Gris intermedio para texto */
-    /* Asegura que ocupa el tamañano justo */
+    color: var(--section-text);
 }
 
 #section1 h2 {
@@ -99,19 +108,22 @@ body {
 }
 
 #section1:hover {
-    transform: translateY(-5px); /* Efecto de levantamiento */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+    transform: translateY(-5px);
+    /* Efecto de levantamiento */
+    box-shadow: 0 12px 24px var(--section-box-shadow)
+        /* Sombra más pronunciada en hover */
 }
 
 #section2 {
     margin: 10px;
     padding: 10px;
-    border: 1px solid grey;
-    border-radius: 4px;
-    background-color: #f4f4f9; /* Fondo claro para resaltar */
-    color: #333; /* Texto oscuro para buena legibilidad */
+    border: 1px solid var(--section-border);
+    background-color: var(--section-bg);
+    /* Fondo claro para resaltar */
+    color: var(--section-text);
+    /* Texto oscuro para buena legibilidad */
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px var(--section-box-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -120,25 +132,31 @@ body {
     float: right;
     margin-left: 10px;
     margin-right: 30px;
-    border-radius: 4px;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    box-shadow: 0 8px 16px var(--section-box-shadow);
+    /* Sombra suave */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 #section2 img:hover {
-    transform: scale(1.05); /* Efecto de zoom ligero */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más profunda */
+    transform: scale(1.05);
+    /* Efecto de zoom ligero */
+    box-shadow: 0 12px 24px var(--section-box-shadow);
+    /* Sombra más profunda */
 }
 
 
 #section2 p {
+    text-align: justify;
     padding-right: 20rem;
     margin-right: 10px;
     height: fit-content;
     overflow: hidden;
     line-height: 1.6;
     font-size: 1rem;
-    color: #555; /* Gris intermedio para texto */
+    color: var(--section-text);
+    /* Gris intermedio para texto */
     /* Asegura que ocupa el tamañano justo */
 }
 
@@ -159,15 +177,17 @@ body {
 }
 
 #section2:hover {
-    transform: translateY(-5px); /* Efecto de levantamiento */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+    transform: translateY(-5px);
+    /* Efecto de levantamiento */
+    box-shadow: 0 12px 24px var(--section-box-shadow);
+    /* Sombra más pronunciada en hover */
 }
 
 .tituloTabla {
     text-align: center;
     display: block;
     font-size: 1.8rem;
-    color: #555555; /* Color gris intermedio */
+    color: var(--titles-text);
     font-weight: 600;
     line-height: 1.4;
     margin: 15px 0;
@@ -175,70 +195,80 @@ body {
     padding-left: 10px;
 }
 
-
+/*Cambia el color solo a las impares*/
 .tabla tbody>tr:nth-child(odd) {
-    background-color: pink;
-    /*Cambia el color solo a las impares*/
+    background-color: var(--section-bg);
 }
 
-
+/*Estilos para eliminar el espacio entre las celdas, dar profundidad, tamaño del texto y tamaño de tabla*/
 .tabla {
     width: 100%;
-    border-collapse: collapse; /* Elimina el espacio entre celdas */
+    border-collapse: collapse;
+    /* Elimina el espacio entre celdas */
     margin: 20px 0;
     font-size: 1rem;
     font-family: Arial, sans-serif;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    box-shadow: 0 8px 16px var(--section-box-shadow);
+    /* Sombra para profundidad */
 }
 
+/* Color de fondo para la cabecera */
 .tabla thead {
-    background-color: grey; /* Color de fondo para la cabecera */
-    color: #ffffff;
+    background-color: var(--table-title);
+    color: var(--titles-text);
 }
 
-.tabla th,
-.tabla td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #dddddd; /* Línea divisoria clara */
-}
-
-.tabla tbody tr {
-    background-color: #f9f9f9; /* Color de fondo alternativo */
-}
-
-.tabla tbody tr:nth-child(even) {
-    background-color: #ffffff; /* Filas pares con color diferente */
-}
-
-.tabla tbody tr:hover {
-    background-color: #f1f1f1; /* Cambio de color al hacer hover */
-}
-
+/* Estilos para los encabezados de la tabla */
 .tabla th {
     font-weight: bold;
 }
 
+
+/* Estilos para las celdas de la tabla, añadiendo relleno, alineación y borde inferior */
+.tabla th,
 .tabla td {
-    color: #333333; /* Color del texto */
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--table-body);
 }
 
+/* Color de fondo alternativo */
+.tabla tbody tr {
+    background-color: var(--table-body);
+}
+
+
+/* Cambio de color al hacer hover */
+.tabla tbody tr:hover {
+    background-color: var(--nav-text);
+}
+
+/*Color del texto fala la celdade datos*/
+.tabla td {
+    color: var(--section-text);
+}
 
 #sectionNews {
     margin: 10px;
     padding: 10px;
-    border: 1px solid grey;
-    border-radius: 4px;
-    background-color: white;
+    border: 1px solid var(--section-border);
+    background-color: var(--section-bg);
+    color: var(--section-text);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px var(--section-box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.labelForm {
-    margin: 5%;
+/*Efecto de levantamiento*/
+#sectionNews:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px var(--section-box-shadow);
 }
+
 
 .buttonForm {
     margin-top: 1%;
-    margin-left: 5%;
+    margin-left: 13%;
     border-radius: 12px;
 }
 
@@ -248,16 +278,32 @@ body {
     float: right;
     margin-left: 10px;
     margin-right: 30px;
-    border-radius: 4px;;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-bottom: 20px;
+    border-radius: 15px;
+    /* Bordes redondeados */
+    box-shadow: 0 8px 16px var(--section-box-shadow);
+    /* Sombra suave */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#sectionNews img:hover {
-    transform: scale(1.05); /* Efecto de zoom ligero */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más profunda */
+
 }
 
+#sectionNews img:hover {
+    transform: scale(1.05);
+    /* Efecto de zoom ligero */
+    box-shadow: 0 12px 24px var(--section-box-shadow);
+    /* Sombra más profunda */
+}
+.tituloNews {
+    text-align: center;
+    display: block;
+    font-size: 1.8rem;
+    color: var(--section-text);
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 15px 0;
+    letter-spacing: 0.5px;
+    padding-left: 10px;
+}
 
 #sectionNews div {
     margin-left: 20%;
@@ -270,41 +316,170 @@ body {
     clear: both;
 }
 
-#card-container {
-    text-align: center;
-    /* Centra las tarjetas horizontalmente */
+.labelFormEmail {
+    padding-top: 5%;
+    margin: 12%;
 }
 
-.card {
-    display: inline-block;
-    /* Hace que las tarjetas se comporten como elementos en línea */
-    width: 30%;
-    /* Ajusta el ancho de las tarsjetas */
-    margin: 1%;
-    /* Añade un margen entre las tarjetas */
-    padding: 20px;
-    /* Añade relleno dentro de las tarjetas */
-    background-color: #f2f2f2;
-    /* Color de fondo de las tarjetas */
-    border: 1px solid #ddd;
-    /* Borde de las tarjetas */
-    box-sizing: border-box;
-    /* Incluye el borde y el relleno en el tamaño total */
+.labelFormName{
+    padding-top: 5%;
+    margin: 15%;
 }
-/* Tarjeta con glassmorphism */
+
+input[type="text"] {
+    
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo */
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    color: var(--section-text); /* Color del texto */
+    background-color: var(--nav-text); /* Fondo claro */
+    border: 2px solid var(--section-border); /* Borde claro inicial */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--section-box-shadow); /* Sombra suave */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--section-border); /* Cambio de color en focus */
+    box-shadow: 0 4px 12px var(--section-box-shadow); /* Sombra más pronunciada en focus */
+    outline: none; /* Elimina el outline predeterminado */
+}
+.buttonForm {
+    margin-top: 1%;
+    margin-left: 13%;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: var(--nav-text); /* Color de texto blanco */
+    background-color: var(--btn-bg); /* Fondo azul vibrante */
+    border: none;
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px var(--section-box-shadow); /* Sombra inicial */
+}
+
+button:hover {
+    color: var(--section-text);
+    background-color: var(--section-bg); /* Color más oscuro en hover */
+    transform: translateY(-2px); /* Ligero efecto de elevación */
+    box-shadow: 0 6px 12px var(--section-box-shadow); /* Sombra más profunda en hover */
+}
+
+button:active {
+    background: var(--background); /* Color aún más oscuro al hacer clic */
+    transform: translateY(1px); /* Simulación de presionado */
+    box-shadow: 0 3px 6px var(--section-box-shadow); /* Sombra reducida al presionar */
+}
+/* Estilos de bg para navegadores actuales y antiugos. Alieneacion del texto y padding*/
+.footer {
+    background: var(--background);
+    color: var(--titles-text);
+    padding: 20px;
+    text-align: center;
+}
+
+/*Alineacion de los iconos de rrss*/
+.footer .social-links {
+    text-align: center;
+}
+
+/*Margen entre iconos*/
+.footer .social-links a {
+    margin: 0 7.5px; 
+}
+/*Tamaño de iconos*/
+.footer .social-links img {
+    height: 24px;
+    vertical-align: middle;
+}
+/*Tamaño, color y margen para el texto*/
+.footer .copyright {
+    font-size: 0.75rem;
+    color: var(--section-border);
+    margin-top: 10px;
+}
+
+.sectionCategorias{
+  
+    border: 1px solid var(--section-border);
+    background-color: var(--section-bg);
+    color: var(--section-text);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px var(--section-box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.sectionCategorias h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#card-container {
+    text-align: center;
+    column-gap: 0;
+}
+
+/* Estilos para la card de cada categoría */
 .tarjeta-glass {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px var(--section-box-shadow);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid var(--section-border);
     display: inline-block;
-    /* Hace que las tarjetas se comporten como elementos en línea */
-    width: 30%;
-    /* Ajusta el ancho de las tarsjetas */
-    margin: 1%;
-    /* Añade un margen entre las tarjetas */
-    padding: 20px;
+    width: 150px; /* Ancho fijo */
+    height: 150px; /* Alto fijo */
+    margin: 4%;
+    position: relative; /* Necesario para posicionar el texto dentro de la tarjeta */
+    background-size: 130px 130px; /* Tamaño pequeño */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-/* Explicación: Este estilo utiliza transparencia y desenfoque para crear un efecto "vidrio", popular en diseños modernos. */
+/*Efecto hover*/
+.tarjeta-glass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px var(--section-box-shadow);
+}
+
+
+/*Imagenes para cada card*/
+.tarjeta-glass.cartas {
+    background-image: url('../img/cartas.svg');
+}
+
+.tarjeta-glass.deportes {
+    background-image: url('../img/deportes.svg'); 
+}
+
+.tarjeta-glass.coches {
+    background-image: url('../img/coches.svg');
+}
+
+.tarjeta-glass.disparos {
+    background-image: url('../img/disparos.svg');
+}
+.tarjeta-glass.plataformas {
+    background-image: url('../img/plataformas.svg');
+}
+.tarjeta-glass.arcade {
+    background-image: url('../img/arcade.svg');
+}
+/*Texto debajo de la card*/
+.tarjeta-glass .bottom-text {
+    position: absolute;
+    bottom: 10px; /* Ajusta según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 1rem; /* Ajusta según sea necesario */
+    color: var(--section-text); /* Ajusta según sea necesario */
+}
