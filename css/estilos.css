@@ -420,7 +420,7 @@ button:active {
     font-size: 1.5rem;
 }
 
-#card-container {
+.card-container {
     text-align: center;
     column-gap: 0;
 }
