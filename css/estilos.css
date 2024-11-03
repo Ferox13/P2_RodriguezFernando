@@ -1,7 +1,6 @@
 /*Paleta de colores usada*/
 :root {
     --background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    --background-old: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
     --section-bg: rgba(255, 255, 255, 0.704);
     --section-text: black;
     --titles-text: white;
@@ -12,7 +11,6 @@
     --table-body: whitesmoke;
     --btn-bg:#0F2027
 }
-
 
 header {
     text-align: center;
@@ -46,9 +44,9 @@ header nav a {
 
 /*Estilos del body*/
 body {
+    font-family: 'Times New Roman', Times, serif;
     margin: 0%;
     overflow-x: hidden;
-    /*Gradiente para navegadores actuales */
     background: var(--background);
 }
 #section1 {
@@ -156,12 +154,10 @@ body {
     line-height: 1.6;
     font-size: 1rem;
     color: var(--section-text);
-    /* Gris intermedio para texto */
-    /* Asegura que ocupa el tamañano justo */
 }
 
 #section2 h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     padding-right: 20rem;
     margin-right: 10px;
     height: fit-content;
@@ -326,8 +322,7 @@ body {
     margin: 15%;
 }
 
-input[type="text"] {
-    
+input[type="text"] {    
     width: 100%;
     max-width: 400px; /* Limita el ancho máximo */
     padding: 12px 15px;
