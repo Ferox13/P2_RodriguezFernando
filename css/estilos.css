@@ -9,15 +9,15 @@
     --section-box-shadow: rgba(0, 0, 0, 0.359);
     --table-title: grey;
     --table-body: whitesmoke;
-    --btn-bg:#0F2027
+    --btn-bg: #0F2027
 }
 
+/*Estilos del header*/
 header {
     text-align: center;
     line-height: 60px;
     height: 100%;
     color: var(--titles-text);
-    /* Gradiente para navegadores actuales */
     background: var(--background);
 }
 
@@ -42,13 +42,15 @@ header nav a {
     padding-left: 1%;
 }
 
-/*Estilos del body*/
+/*Eliminar el margen para que el header y el footer entén pegados al límet de la ventana*/
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0%;
     overflow-x: hidden;
     background: var(--background);
 }
+
+/*Estilo para la sección 1. Borde, colores, animación*/
 #section1 {
     margin: 10px;
     padding: 10px;
@@ -60,6 +62,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/*Estilos para la imagen. Tamaño, borde y animación*/
 #section1 img {
     margin-top: 1.5%;
     float: left;
@@ -70,6 +73,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/*Hover para la imagen*/
 #section1 img:hover {
     transform: scale(1.05);
     /* Efecto de zoom ligero */
@@ -89,13 +93,13 @@ body {
     color: var(--section-text);
 }
 
+
 #section1 h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     padding-left: 20rem;
     margin-left: 10px;
     height: fit-content;
     overflow: hidden;
-    /* Asegura que ocupa el tamañano justo */
 }
 
 /*Estilo para que el section envuelva los elementos flotantes*/
@@ -105,11 +109,10 @@ body {
     clear: both;
 }
 
+/* Efecto de levantamiento */
 #section1:hover {
     transform: translateY(-5px);
-    /* Efecto de levantamiento */
     box-shadow: 0 12px 24px var(--section-box-shadow)
-        /* Sombra más pronunciada en hover */
 }
 
 #section2 {
@@ -145,7 +148,7 @@ body {
 }
 
 
-#section2 p {
+#section2 > p {
     text-align: justify;
     padding-right: 20rem;
     margin-right: 10px;
@@ -171,18 +174,16 @@ body {
     display: table;
     clear: both;
 }
-
+/*Efecto de levantamiento y sombra */
 #section2:hover {
     transform: translateY(-5px);
-    /* Efecto de levantamiento */
     box-shadow: 0 12px 24px var(--section-box-shadow);
-    /* Sombra más pronunciada en hover */
 }
-
+/*Tamaño y alineacion del titulo de la tabla*/
 .tituloTabla {
     text-align: center;
     display: block;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--titles-text);
     font-weight: 600;
     line-height: 1.4;
@@ -243,7 +244,7 @@ body {
 .tabla td {
     color: var(--section-text);
 }
-
+/*Estilos para la última sección*/
 #sectionNews {
     margin: 10px;
     padding: 10px;
@@ -261,38 +262,34 @@ body {
     box-shadow: 0 12px 24px var(--section-box-shadow);
 }
 
-
+/*Estilos para el botónd el formulario*/
 .buttonForm {
     margin-top: 1%;
     margin-left: 13%;
     border-radius: 12px;
 }
-
-
-
+/*Estilos par ala imagen de la derecha de la última sección*/
 #sectionNews img {
     float: right;
     margin-left: 10px;
     margin-right: 30px;
     margin-bottom: 20px;
     border-radius: 15px;
-    /* Bordes redondeados */
     box-shadow: 0 8px 16px var(--section-box-shadow);
-    /* Sombra suave */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
-
+/*Efecto hover de la imagen*/
 #sectionNews img:hover {
     transform: scale(1.05);
-    /* Efecto de zoom ligero */
     box-shadow: 0 12px 24px var(--section-box-shadow);
-    /* Sombra más profunda */
 }
+
+/*Estilo para centrat y tamaño del titulo de la sección*/
 .tituloNews {
     text-align: center;
     display: block;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--section-text);
     font-weight: 600;
     line-height: 1.4;
@@ -300,7 +297,7 @@ body {
     letter-spacing: 0.5px;
     padding-left: 10px;
 }
-
+/*Margen izquiedo del formulario*/
 #sectionNews div {
     margin-left: 20%;
 }
@@ -311,68 +308,73 @@ body {
     display: table;
     clear: both;
 }
-
+/*Posicionamiento del label para email*/
 .labelFormEmail {
     padding-top: 5%;
     margin: 12%;
 }
-
-.labelFormName{
+/*Posicionamiento del label para nombre*/
+.labelFormName {
     padding-top: 5%;
     margin: 15%;
 }
 
-input[type="text"] {    
+/*Estilo para selector input de tipo text*/
+input[type="text"] {
     width: 100%;
-    max-width: 400px; /* Limita el ancho máximo */
+    max-width: 400px;
     padding: 12px 15px;
     font-size: 1rem;
     font-family: Arial, sans-serif;
-    color: var(--section-text); /* Color del texto */
-    background-color: var(--nav-text); /* Fondo claro */
-    border: 2px solid var(--section-border); /* Borde claro inicial */
+    color: var(--section-text);
+    background-color: var(--nav-text);
+    border: 2px solid var(--section-border);
     border-radius: 8px;
-    box-shadow: 0 4px 8px var(--section-box-shadow); /* Sombra suave */
+    box-shadow: 0 4px 8px var(--section-box-shadow);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
+/*Estilo para focus de los input de tipo texto*/
 input[type="text"]:focus {
-    border-color: var(--section-border); /* Cambio de color en focus */
-    box-shadow: 0 4px 12px var(--section-box-shadow); /* Sombra más pronunciada en focus */
+    border-color: var(--section-border);
+    box-shadow: 0 4px 12px var(--section-box-shadow);
     outline: none; /* Elimina el outline predeterminado */
+
 }
+/*Posicionamiento del botón del formulario*/
 .buttonForm {
     margin-top: 1%;
     margin-left: 13%;
 }
-
+/*Estilos para el botón del formulario*/
 button {
     padding: 12px 20px;
     font-size: 1rem;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    color: var(--nav-text); /* Color de texto blanco */
-    background-color: var(--btn-bg); /* Fondo azul vibrante */
+    color: var(--nav-text);
+    background-color: var(--btn-bg);
     border: none;
-    border-radius: 8px; /* Bordes redondeados */
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 8px var(--section-box-shadow); /* Sombra inicial */
+    box-shadow: 0 4px 8px var(--section-box-shadow);
 }
-
+/*Estilos para el hover el botón del forulario*/
 button:hover {
     color: var(--section-text);
-    background-color: var(--section-bg); /* Color más oscuro en hover */
-    transform: translateY(-2px); /* Ligero efecto de elevación */
-    box-shadow: 0 6px 12px var(--section-box-shadow); /* Sombra más profunda en hover */
+    background-color: var(--section-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--section-box-shadow);
 }
 
+/*Estilos para el botón cuando haces click*/
 button:active {
-    background: var(--background); /* Color aún más oscuro al hacer clic */
-    transform: translateY(1px); /* Simulación de presionado */
-    box-shadow: 0 3px 6px var(--section-box-shadow); /* Sombra reducida al presionar */
+    background: var(--background);
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px var(--section-box-shadow);
 }
-/* Estilos de bg para navegadores actuales y antiugos. Alieneacion del texto y padding*/
+
+/* Estilos de bg par. Alieneacion del texto y padding*/
 .footer {
     background: var(--background);
     color: var(--titles-text);
@@ -387,13 +389,15 @@ button:active {
 
 /*Margen entre iconos*/
 .footer .social-links a {
-    margin: 0 7.5px; 
+    margin: 0 7.5px;
 }
+
 /*Tamaño de iconos*/
 .footer .social-links img {
     height: 24px;
     vertical-align: middle;
 }
+
 /*Tamaño, color y margen para el texto*/
 .footer .copyright {
     font-size: 0.75rem;
@@ -401,8 +405,8 @@ button:active {
     margin-top: 10px;
 }
 
-.sectionCategorias{
-  
+/*Estilo para la scción de categorias*/
+.sectionCategorias {
     border: 1px solid var(--section-border);
     background-color: var(--section-bg);
     color: var(--section-text);
@@ -410,11 +414,12 @@ button:active {
     box-shadow: 0 8px 16px var(--section-box-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+/*Titulo para la sección de cateogrias, tamaño y alineacion*/
 .sectionCategorias h2 {
     text-align: center;
     font-size: 1.5rem;
 }
-
+/*Alineacion de las cards de categrias*/
 .card-container {
     text-align: center;
     column-gap: 0;
@@ -429,21 +434,21 @@ button:active {
     backdrop-filter: blur(10px);
     border: 1px solid var(--section-border);
     display: inline-block;
-    width: 150px; /* Ancho fijo */
-    height: 150px; /* Alto fijo */
+    width: 150px;/* Ancho fijo */
+    height: 150px;/* Alto fijo */
     margin: 4%;
-    position: relative; /* Necesario para posicionar el texto dentro de la tarjeta */
-    background-size: 130px 130px; /* Tamaño pequeño */
+    position: relative;/* Necesario para posicionar el texto dentro de la tarjeta */
+    background-size: 130px 130px; /* Tamaño imagen*/
     background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-repeat: no-repeat;/* Evita que la imagen se repita */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 /*Efecto hover*/
 .tarjeta-glass:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px var(--section-box-shadow);
 }
-
 
 /*Imagenes para cada card*/
 .tarjeta-glass.cartas {
@@ -451,7 +456,7 @@ button:active {
 }
 
 .tarjeta-glass.deportes {
-    background-image: url('../img/deportes.svg'); 
+    background-image: url('../img/deportes.svg');
 }
 
 .tarjeta-glass.coches {
@@ -461,20 +466,24 @@ button:active {
 .tarjeta-glass.disparos {
     background-image: url('../img/disparos.svg');
 }
+
 .tarjeta-glass.plataformas {
     background-image: url('../img/plataformas.svg');
 }
+
 .tarjeta-glass.arcade {
     background-image: url('../img/arcade.svg');
 }
+
 /*Texto debajo de la card*/
 .tarjeta-glass .bottom-text {
     position: absolute;
-    bottom: 10px; /* Ajusta según sea necesario */
+    bottom: 10px;
+    /* Ajusta según sea necesario */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
-    font-size: 1rem; /* Ajusta según sea necesario */
-    color: var(--section-text); /* Ajusta según sea necesario */
+    font-size: 1rem;
+    color: var(--section-text);
 }
